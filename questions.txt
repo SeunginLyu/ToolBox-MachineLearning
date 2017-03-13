@@ -1,0 +1,24 @@
+1. What is the general trend in the curve?
+
+The test accuracy linearly increases as we train more percentage of data from
+the data set. The more data used to train, the better the results are.
+
+2. Are there parts of the curve that appear to be noisier than others? Why?
+
+The curve gets noisier as the training data percentage approaches to 0.50(the middle)
+from either sides. This is because with either large or small number of training data,
+it is trivial that the test accuracies will be really high of low respectively.
+And 50% of training data would be a logically true representation of the test
+accuracy with the given dataset and therefore it fluctuates a little more.
+
+
+3. How many trials do you need to get a smooth curve?
+I got a relatively smooth curve with n = 150. It should be even smoother with
+greater values like n = 1000 but it would take a much longer time to run.
+
+4. Try different values for C. What happens?
+When I use a higher number for C (c=10**-1), the graph looks like a square-root
+plot and the test accuracies sharply increased. When I use a lower number
+C(c= 10**-30), the plot became really noisy and the accuracies sharply decreased.
+Since we expect linearly proportional results here, I would say the original
+value C=10**-10 is a pretty good choice here.
